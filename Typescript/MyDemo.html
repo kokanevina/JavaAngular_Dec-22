@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>MYDEMO</title>
+
+    </head>
+    <body>
+       <hr>
+        <article id="neoarticle">
+
+        </article>
+        <button onclick="myFun()">CLICK</button>
+        <script>
+            function myFun(){
+                let h1ele=document.createElement("h1");
+                h1ele.textContent="NEOSOFT TECHNOLOGY";
+                document.body.append(h1ele);
+                let h2ele=document.createElement("h2");
+                h2ele.textContent="WEB WERKS";
+                let articleNode=document.getElementById("neoarticle");
+                articleNode.append(h2ele);
+            //  articleNode.before(h1ele);
+            h1ele.style.color="red";
+            }
+        </script>
+    </body>
+</html>
