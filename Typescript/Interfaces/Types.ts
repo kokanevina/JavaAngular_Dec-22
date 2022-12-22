@@ -44,7 +44,7 @@ interface FatherIntf{
 interface MotherIntf{
     dream();
 }
-
+// multiple inheritance is supported (same methods if have then they should be identical)
 interface ChildIntf extends FatherIntf, MotherIntf{
     goal();
 }
