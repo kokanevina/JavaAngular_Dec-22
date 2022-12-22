@@ -54,4 +54,4 @@ class B extends A{
 }
 // scope : same or increased
 //return : same , but super class method is void then subclass can have any return type
-// co variants
+// co variants allowed
