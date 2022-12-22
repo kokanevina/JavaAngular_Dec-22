@@ -18,7 +18,7 @@ class NeoEmployee{
         return NeoEmployee.counter;
     }
     static test(e:NeoEmployee){
-        console.log(e.empId);
+        console.log(e.empId); // to access nonstatic data in static method
         console.log(NeoEmployee.counter);
         
     }
