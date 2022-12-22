@@ -13,12 +13,22 @@ var NeoEmployee = /** @class */ (function () {
     NeoEmployee.prototype.showDetails = function () {
         return "id: ".concat(this.empId, ", name: ").concat(this.empName, ", salary: ").concat(this.empSalary);
     };
+    NeoEmployee.getCounter = function () {
+        return NeoEmployee.counter;
+    };
+    NeoEmployee.test = function (e) {
+        console.log(e.empId); // to access nonstatic data in static method
+        console.log(NeoEmployee.counter);
+    };
     NeoEmployee.counter = 0;
     return NeoEmployee;
 }());
 NeoEmployee.companyName = "Neosoft";
-console.log(NeoEmployee.counter);
+//console.log(NeoEmployee.counter);
+console.log(NeoEmployee.getCounter());
 var emp1 = new NeoEmployee(45, "hari", 67000);
 var emp2 = new NeoEmployee(12, "Rupa", 56000);
 var emp3 = new NeoEmployee(67, "kiran", 56000);
-console.log(NeoEmployee.counter);
+//console.log(NeoEmployee.counter);
+console.log(NeoEmployee.getCounter());
+NeoEmployee.test(emp1);
