@@ -1,11 +1,7 @@
 
-
 // Array : generic
-
 // Set : generic
-
 //Map : generic
-
 let arr1=[67,"hi",true,34,"hello"];
 let arr2=new Array(67,5,23,78,56);
 let arr3=new Array("hi","helo","welcome","bye");
@@ -20,27 +16,21 @@ arr4.pop();
 console.log(arr4);
 let arr5=new Array();
 console.log(arr5.length);
-
 let stringStack=new Array<String>();
 stringStack.push("hello");
 stringStack.push("hello");
 stringStack.push(new String("hi"));
 console.log(stringStack);
-
-
 let numberStack=new Array<Number>();
 numberStack.push(456);
 numberStack.push(456.45);
 console.log(numberStack);
-
-
 let empSet=new Set<String>();
 empSet.add("Hari");
 empSet.add("Hari");
 empSet.add("Pooja");
 empSet.add("Parinita");
 console.log(empSet);
-
 
 class Book{
     bookId:number;
@@ -50,22 +40,20 @@ class Book{
         this.booName=name;
     }
 }
-
 let bookList=new Array<Book>();
 bookList.push(new Book(12,"Java"));
 bookList.push(new Book(11,"Java Web"));
 bookList.push(new Book(13,"Web"));
 bookList.push(new Book(11,"Python"));
 bookList.push(new Book(12,"Java"));
-
 let bookList2=new Set<Book>();
+
 bookList2.add(new Book(12,"Java"));
 bookList2.add(new Book(11,"Java Web"));
 bookList2.add(new Book(13,"Web"));
 bookList2.add(new Book(11,"Python"));
 bookList2.add(new Book(12,"Java"));
 console.log(bookList2);
-
 
 let map=new Map<String,String>();
 map.set("sun","planet which gives energy to other planets");
