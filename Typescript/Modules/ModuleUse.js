@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var Utility_1 = require("./MyModule/Utility");
+var Utility_2 = require("./MyModule/Utility");
+var trainer = new Utility_1.Trainer(33, "Poonam", 30);
+console.log(trainer.getDetails());
+var trainer2 = new Utility_1.Trainer();
+console.log(trainer2.getDetails());
+var ci = new Utility_1.Circle();
+console.log(Utility_2["default"]);
