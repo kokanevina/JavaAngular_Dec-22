@@ -1,0 +1,13 @@
+.myNav{
+    background-color: black;
+    border: 2px solid white;
+}
+.flexContain{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}

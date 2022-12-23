@@ -2,4 +2,6 @@
 <header class="myHeader">
     <app-navbar></app-navbar>
     <h1>Driving Digital Growth, {{subHeading}} </h1> 
+    <input type="text" [(ngModel)]="subHeading" (input)="test()">
 </header>
+
