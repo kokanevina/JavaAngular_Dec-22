@@ -4,9 +4,22 @@
   <app-header></app-header>
   <section class="mainSection">
   
-  
-  
-  
+  <b>{{title}}</b>
+  <div>
+    <input type="text" [(ngModel)]="title">
+    <button (click)="demo()">SUBMIT</button>
+  </div>
+  <div>
+    <input type="number" #numnode1> +
+    <input type="number" #numnode2> 
+    <button (click)="add(numnode1.value,numnode2.value)">ADD</button>
+    {{addition}}
+  </div>
+  <div>
+    <label>Password:</label>
+    <input [type]="inputType">
+    <input type="checkbox" (change)="showhide($event)"><label>Show password</label>
+  </div>
   
   </section>
   <app-footer></app-footer>
