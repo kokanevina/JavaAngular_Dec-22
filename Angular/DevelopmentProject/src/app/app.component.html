@@ -17,9 +17,52 @@
   </div>
   <div>
     <label>Password:</label>
-    <input [type]="inputType">
+    <input [type]="inputType" (focus)="test()">
     <input type="checkbox" (change)="showhide($event)"><label>Show password</label>
   </div>
+  <div>
+    <input type="number" [(ngModel)]="age">
+    <div>
+    <p *ngIf="age>=18">You are allowed for voting</p>
+    <p *ngIf="age<18">You are NOT allowed for voting</p>
+   </div>
+   <div>
+    <p *ngIf="age>=18; else elsepart1">You are allowed for voting</p>
+    <ng-template #elsepart1>
+      <p>You are NOT  allowed</p>
+    </ng-template>
+   </div>
+  </div>
+  <div>
+    <span *ngIf="age>=18 then thenpart; else elsepart"></span>
+    <ng-template #thenpart>
+      <p>Hurray!!! You are allowed</p>
+    </ng-template>
+    <ng-template #elsepart>
+      <p>SORRYY :( You are allowed</p>
+    </ng-template>
+  </div>
+<div>
+  <ol>
+    <li *ngFor="let city of stationArray">{{city}}</li>
+  </ol>
+</div>
+<div>
+  <table border="3" [ngClass]="styleArray">
+    <thead></thead>
+    <tbody>
+      <tr *ngFor="let employee of empArray">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.salary}}</td>
+        <td *ngFor="let exp of employee.experience">{{exp}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="fontLogic()" [ngStyle]="myStyle">{{label}}</button>
+  <button (click)="styleArray.push('decorateClass')">DECORATE</button>
+</div>
+
   </section>
-  <app-footer></app-footer>
+    <app-footer></app-footer>
   </section>

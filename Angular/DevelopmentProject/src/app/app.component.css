@@ -2,9 +2,21 @@
     color: blue;
     text-shadow: 10px 10px 10px;
 }
-.mainSection{
-    height: 300px;
-}
+
 .appSection{
     background-color: antiquewhite;
+}
+
+.colorClass{
+    background-color: yellow;
+    color: green;
+}
+.fontClass{
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.decorateClass{
+    text-decoration: underline;
+    text-shadow: 5px 5px 5px;
 }
