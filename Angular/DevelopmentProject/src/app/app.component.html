@@ -62,6 +62,37 @@
   <button (click)="fontLogic()" [ngStyle]="myStyle">{{label}}</button>
   <button (click)="styleArray.push('decorateClass')">DECORATE</button>
 </div>
+<div>
+  <table border="3" [ngClass]="styleArray">
+    <thead></thead>
+    <tbody>
+      <tr *ngFor="let employee of empArray"> 
+        <td>{{employee.name}}</td>   
+        <td>{{employee.name | uppercase }}</td>   
+        <td>{{employee.name | lowercase }}</td>   
+        <td>{{employee.name | titlecase }}</td>   
+        <td>{{employee.name | slice : 2 }}</td>  
+        <td>{{employee.name | slice : 2 : 6 }}</td>  
+        <td>{{employee.name | slice : -2 }}</td> 
+        <td>{{employee.name | slice : 2 : -3 }}</td>   
+      </tr>
+    </tbody>
+  </table>
+  <table border="3" >
+    <thead></thead>
+    <tbody>
+      <tr *ngFor="let employee of empArray"> 
+        <td>{{employee.salary}}</td>   
+        <td>{{employee.salary | number}}</td>   
+        <td>{{employee.salary | number : '6.2-2'}}</td>   
+        <td>{{employee.salary | currency}}</td>   
+        <td>{{employee.salary | currency : 'INR' : true :'6.3-3'}}</td>   
+      </tr>
+      <!-- true: currency symbol
+      false : currency code-->
+    </tbody>
+  </table>
+</div>
 
   </section>
     <app-footer></app-footer>

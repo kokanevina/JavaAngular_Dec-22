@@ -35,10 +35,10 @@ export class AppComponent {
    employee:Employee=new Employee(33,"Krupa",67000,[4,4]);
 
 empArray:Employee[]=[
-  new Employee(33,"Krupa",57000,[23,12,2]),
-  new Employee(13,"Rupa",67350,[23,0]),
-  new Employee(35,"Krupali",97000,[0,34]),
-  new Employee(23,"Krupan",68000,[1,1])
+  new Employee(33,"krupa patil",57000.454543,[23,12,2]),
+  new Employee(13,"RuPa",67350.5632,[23,0]),
+  new Employee(35,"MANALI",97000.783,[0,34]),
+  new Employee(23,"KiRAN",68000.12,[1,1])
 ]
 
   display(){
