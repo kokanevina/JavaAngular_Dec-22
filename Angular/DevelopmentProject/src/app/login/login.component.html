@@ -1,10 +1,10 @@
 <section>
     <h2>LOGIN DETAILS</h2>
-    <form>
+    <form #loginForm="ngForm" (submit)="collectData(loginForm)">
         <label>Username:</label>
-        <input type="text" id="uname"><br><br>
+        <input type="text" name="username" ngModel><br><br>
         <label>Password:</label>
-        <input type="password" id="pass"><br><br>
+        <input type="password" name="pass" ngModel><br><br>
         <input type="submit" value="LOGIN">
         <input type="reset"><br><br>
         <p>
