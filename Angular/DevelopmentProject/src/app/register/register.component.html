@@ -1,19 +1,21 @@
 <section>
     <h2>TRAINING REGISTRATION DETAILS</h2>
+    <form  [formGroup]="registerForm">
     <label>Enter Full Name:</label>
-    <input type="text" id="fname"><br><br>
+    <input type="text" formControlName="fullName"><br><br>
     <label>Enter Email Id:</label>
-    <input type="email" id="emailId"><br><br>
+    <input type="email" id="emailId" formControlName="emailId"><br><br>
     <label>Enter Mobile number:</label>
-    <input type="number" id="mobile"><br><br>
+    <input type="number" id="mobile" formControlName="mobileNo"><br><br>
     <label>Set Username:</label>
-    <input type="text" id="uname"><br><br>
+    <input type="text" id="uname" formControlName="userName"><br><br>
     <label>Set Password:</label>
-    <input type="password" id="pass"><br><br>
+    <input type="password" id="pass"  formControlName="password"><br><br>
     <label>Confirm Password:</label>
-    <input type="password" id="cpass"><br><br>
+    <input type="password" id="cpass"  formControlName="confirmPass"><br><br>
     <input type="submit" value="REGISTER"> 
     <input type="reset" > <br><br>
+    </form>
     <p>
         Existing User?? <a routerLink="/login"> click here to login</a>
     </p>
