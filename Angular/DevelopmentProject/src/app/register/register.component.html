@@ -1,6 +1,6 @@
 <section>
     <h2>TRAINING REGISTRATION DETAILS</h2>
-    <form  [formGroup]="registerForm">
+    <form  [formGroup]="registerForm" (submit)="collectData()">
     <label>Enter Full Name:</label>
     <input type="text" formControlName="fullName"><br><br>
     <label>Enter Email Id:</label>

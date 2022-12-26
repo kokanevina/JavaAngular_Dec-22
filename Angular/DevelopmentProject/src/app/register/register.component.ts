@@ -21,4 +21,13 @@ export class RegisterComponent {
      
     );
   }
+
+
+  collectData():void{
+    console.log(this.registerForm);
+    console.log(this.registerForm.value.fullName);
+    console.log(this.registerForm.value.emailId);
+    console.log(this.registerForm.value.mobileNo);
+    console.log(this.registerForm.value.userName);
+  }
 }
