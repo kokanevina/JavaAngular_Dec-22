@@ -11,6 +11,7 @@ import { MyDevelopmentComponent } from './my-development/my-development.componen
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { ViewnotfoundComponent } from './viewnotfound/viewnotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     MyDevelopmentComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ViewnotfoundComponent
   ],
   imports: [
     BrowserModule,
