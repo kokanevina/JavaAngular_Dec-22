@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormControl, Validators} from '@angular/forms';
+import { JsonCrudService } from '../crud/json-crud.service';
+import { User } from '../crud/User';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,7 +10,7 @@ import { FormGroup,FormControl, Validators} from '@angular/forms';
 export class RegisterComponent {
 
   registerForm:FormGroup;
-  constructor(){
+  constructor(private jsoncrud:JsonCrudService){
     this.registerForm=new FormGroup(
       {
         fullName:new FormControl("",[Validators.required, Validators.pattern("^[A-Za-z ]*$")]),
@@ -38,10 +40,14 @@ export class RegisterComponent {
  }
   collectData():void{
     console.log(this.registerForm);
-    console.log(this.registerForm.value.fullName);
-    console.log(this.registerForm.value.emailId);
-    console.log(this.registerForm.value.mobileNo);
-    console.log(this.registerForm.value.userName);
+    let user = new User(this.registerForm.value.fullName,this.registerForm.value.emailId,this.registerForm.value.mobileNo,this.registerForm.value.userName,this.registerForm.value.password);
+   
+    this.jsoncrud.addUser(user).subscribe(
+      {
+        next:result=>console.log(result),
+        error:err=>console.log(err)
+      }
+    );;
   }
 
   matchPassword(regForm:FormGroup){

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { MyDevelopmentComponent } from './my-development/my-development.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +27,7 @@ import { ViewnotfoundComponent } from './viewnotfound/viewnotfound.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
