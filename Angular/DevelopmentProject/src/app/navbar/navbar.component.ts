@@ -6,10 +6,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  @Input()
+  @Input() /* data coming as input from parent */
   navbar=[];
 
-  brandName="NEOSOFT";
+  brandName="NEOSOFTTTTTTTT";
 
   @Output()
   emitter=new EventEmitter<String>();
