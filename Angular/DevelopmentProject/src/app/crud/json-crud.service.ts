@@ -20,7 +20,7 @@ export class JsonCrudService {
     return this.http.delete(`${this.serverurl}/${uid}`);
   }
    getAllUsers(){
-
+      return this.http.get(this.serverurl);
    }
    getUserById(uid){
       return this.http.get(`${this.serverurl}/${uid}`);

@@ -1,6 +1,7 @@
 
 <header class="myHeader">
-    <app-navbar></app-navbar>
-    <h1>Driving Digital Growth, {{subHeading}} </h1> 
+    <h1>{{brand}}</h1>
+    <app-navbar [navbar]="navArray"  (emitter)="parentfun($event)"></app-navbar>
+    <h2>Driving Digital Growth, {{subHeading}} </h2> 
 </header>
 

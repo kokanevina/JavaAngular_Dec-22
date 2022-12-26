@@ -13,6 +13,12 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ViewnotfoundComponent } from './viewnotfound/viewnotfound.component';
+import { UsersComponent } from './users/users.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +29,14 @@ import { ViewnotfoundComponent } from './viewnotfound/viewnotfound.component';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    ViewnotfoundComponent
+    ViewnotfoundComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule,
+    HttpClientModule, BrowserAnimationsModule, MatSlideToggleModule,
+    MatButtonModule,MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

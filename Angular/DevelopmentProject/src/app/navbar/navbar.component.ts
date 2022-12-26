@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Input()
+  navbar=[];
 
+  brandName="NEOSOFT";
+
+  @Output()
+  emitter=new EventEmitter<String>();
+
+   ngOnInit(){
+    console.log("lifecycle");
+    
+    this.emitter.emit(this.brandName);
+   }
 }

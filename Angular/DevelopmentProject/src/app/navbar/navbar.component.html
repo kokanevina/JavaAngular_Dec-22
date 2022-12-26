@@ -1,9 +1,13 @@
 <nav class="myNav">
-    
+   <!--  
     <ol class="flexContain">
         <li><a routerLink="home">HOME</a></li>
         <li><a routerLink="login">LOGIN/REGISTER</a> </li>
-        <li><a href="#">DEPARTMENTS</a> </li>
-        <li><a href="#">CONTACT US</a> </li>     
+        <li><a routerLink="showusers">SHOW USERS</a> </li>
+    </ol> -->
+    <ol class="flexContain">
+        <li *ngFor="let item of navbar" >
+            <a [routerLink]="[item.navLink]">{{item.navlabel}}</a>
+        </li>
     </ol>
 </nav>
