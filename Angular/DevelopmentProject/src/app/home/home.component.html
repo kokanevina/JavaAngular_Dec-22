@@ -19,4 +19,17 @@
 
        
     </div>
+    <div>
+        <form #addForm="ngForm" (submit)="addNums(addForm)">
+            <input type="number" name="num1" ngModel> +
+            <input type="number" name="num2" ngModel>
+            <input type="submit" value="=">
+            <span>{{addition}}</span>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <button (click)="getCounter()">INCREMENT</button>
+        <p>Counter value from service : {{count}}</p>
+    </div>
 </section>
