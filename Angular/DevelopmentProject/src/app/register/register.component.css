@@ -1,0 +1,10 @@
+.errorStyle{
+    color: red;
+    font-style: italic;
+}
+input.ng-invalid{
+    border: red 3px solid;
+}
+input.ng-valid{
+    border: green 3px solid;
+}

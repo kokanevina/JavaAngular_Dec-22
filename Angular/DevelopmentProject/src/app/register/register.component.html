@@ -2,17 +2,69 @@
     <h2>TRAINING REGISTRATION DETAILS</h2>
     <form  [formGroup]="registerForm" (submit)="collectData()">
     <label>Enter Full Name:</label>
-    <input type="text" formControlName="fullName"><br><br>
+    <input type="text" formControlName="fullName"><br>
+    <div *ngIf="fulln.touched" [ngClass]="['errorStyle']">
+        <div *ngIf="fulln.invalid && fulln.errors['required'] ">
+            <p>Full Name is required</p>
+        </div>
+        <div *ngIf="fulln.invalid && fulln.errors['pattern'] ">
+            <p>Full Name should contain only Alphabets</p>
+        </div>
+    </div>
+    <br>
     <label>Enter Email Id:</label>
     <input type="email" id="emailId" formControlName="emailId"><br><br>
     <label>Enter Mobile number:</label>
-    <input type="number" id="mobile" formControlName="mobileNo"><br><br>
+    <input type="text" id="mobile" formControlName="mobileNo"><br><br>
     <label>Set Username:</label>
-    <input type="text" id="uname" formControlName="userName"><br><br>
+    <input type="text" id="uname" formControlName="userName">
+    <br>
+    <div *ngIf="uname.touched" [ngClass]="['errorStyle']">
+        <div *ngIf="uname.invalid && uname.errors['required'] ">
+            <p>Username is required</p>
+        </div>
+        <div *ngIf="uname.invalid && uname.errors['minlength'] ">
+            <p>Username should have min 3 characters</p>
+        </div>
+        <div *ngIf="uname.invalid && uname.errors['maxlength'] ">
+            <p>Username should have max 7 characters</p>
+        </div>
+    </div>
+    <br>
     <label>Set Password:</label>
-    <input type="password" id="pass"  formControlName="password"><br><br>
+    <input type="text" id="pass"  formControlName="password">
+    <br>
+    <div *ngIf="pass.touched" [ngClass]="['errorStyle']">
+        <div *ngIf="pass.invalid && pass.errors['required'] ">
+            <p>Password is required</p>
+        </div>
+        <div *ngIf="pass.invalid && pass.errors['pattern'] ">
+            <span>password should contain atleast</span>
+            <ol>
+                <li>one capital letter</li>
+                <li>one small letter</li>
+                <li>one digit letter</li>
+                <li>one special symbol</li>
+            </ol>
+            <span>and should be min 6 and max 12 characters long</span>
+        </div>
+        <div *ngIf="uname.invalid && uname.errors['maxlength'] ">
+            <p>Username should have max 7 characters</p>
+        </div>
+    </div>
+    <br>
     <label>Confirm Password:</label>
-    <input type="password" id="cpass"  formControlName="confirmPass"><br><br>
+    <input type="text" id="cpass"  formControlName="confirmPass">
+    <br>
+    <div *ngIf="cpass.touched" [ngClass]="['errorStyle']">
+        <div *ngIf="cpass.invalid && cpass.errors['required'] ">
+            <p>Confirm Password is required</p>
+        </div>
+        <div *ngIf="registerForm.invalid && registerForm.errors['matchfail']">
+            <p>Password not matched</p>
+        </div>
+    </div>
+    <br>
     <input type="submit" value="REGISTER"> 
     <input type="reset" > <br><br>
     </form>
