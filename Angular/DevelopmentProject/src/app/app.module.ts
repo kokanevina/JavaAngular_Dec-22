@@ -19,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+
+import {OrderModule} from 'ngx-order-pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,7 @@ import {MatTableModule} from '@angular/material/table';
     BrowserModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule,
     HttpClientModule, BrowserAnimationsModule, MatSlideToggleModule,
-    MatButtonModule,MatTableModule
+    MatButtonModule,MatTableModule,OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -86,4 +86,25 @@
       false : currency code-->
     </tbody>
   </table>
+  <h1>ORDER BY DEMO</h1>
+  <table border="3" [ngClass]="styleArray">
+    <thead>
+      <th (click)="customSort('id')">ID</th>
+      <th (click)="customSort('name')">NAME</th>
+      <th (click)="customSort('salary')">SALARY</th>
+      <th>EXPERIENCE</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of empArray | orderBy : sortProperty : sortOrder : case">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.salary}}</td>
+        <td *ngFor="let exp of employee.experience">{{exp}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <ol>
+    <li *ngFor="let station of stationArray | orderBy">{{station}}</li>
+  </ol>
 </div>
+<!-- by default asc : false, desc : true-->

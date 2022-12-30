@@ -70,5 +70,10 @@ fontLogic(){
   }
 }
 
-
+sortProperty="id";
+sortOrder=false;   /*false for asc, true for desc */
+case:false;   /*false for case sensitive, true for case insensitive */
+customSort(property:string){
+  this.sortProperty=property;
+}
 }
