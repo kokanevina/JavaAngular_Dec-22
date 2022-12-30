@@ -16,9 +16,11 @@
             student's learning experience and build cohesive platforms 
             for cultivating enduring experiences.
         </p>
-
-       
     </div>
+    <a routerLink="slideshow">SLIDE SHOW</a>
+    <section>
+        <router-outlet></router-outlet>
+    </section>
     <div>
         <form #addForm="ngForm" (submit)="addNums(addForm)">
             <input type="number" name="num1" ngModel> +
