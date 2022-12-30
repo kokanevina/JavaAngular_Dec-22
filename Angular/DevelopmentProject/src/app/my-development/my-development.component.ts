@@ -16,7 +16,6 @@ export class MyDevelopmentComponent {
   }
   demo(){
     console.log(this.title);
-    
   }
   add(num1:string,num2:string){
     this.addition=parseFloat(num1)+parseFloat(num2);

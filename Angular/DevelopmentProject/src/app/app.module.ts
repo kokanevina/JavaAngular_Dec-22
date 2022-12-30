@@ -21,6 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 
 import {OrderModule} from 'ngx-order-pipe';
+import { ReversePipe } from './custompipes/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {OrderModule} from 'ngx-order-pipe';
     RegisterComponent,
     LoginComponent,
     ViewnotfoundComponent,
-    UsersComponent
+    UsersComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

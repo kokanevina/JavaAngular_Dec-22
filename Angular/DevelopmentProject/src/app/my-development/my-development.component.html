@@ -106,5 +106,8 @@
   <ol>
     <li *ngFor="let station of stationArray | orderBy">{{station}}</li>
   </ol>
+  <ol>
+    <li *ngFor="let station of stationArray ">{{station | reversestring : "Neo-" }}</li>
+  </ol>
 </div>
 <!-- by default asc : false, desc : true-->
