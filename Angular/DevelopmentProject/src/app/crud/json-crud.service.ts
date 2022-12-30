@@ -13,8 +13,7 @@ export class JsonCrudService {
     return this.http.post(this.serverurl,user);
   }
   updateUser(uid,user){
-    return this.http.put(this.serverurl,user);
-  
+    return this.http.put(`${this.serverurl}/${uid}`,user);
   }
   deleteUser(uid){
     return this.http.delete(`${this.serverurl}/${uid}`);

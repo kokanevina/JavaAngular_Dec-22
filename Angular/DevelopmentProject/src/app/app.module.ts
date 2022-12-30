@@ -22,6 +22,7 @@ import {MatTableModule} from '@angular/material/table';
 
 import {OrderModule} from 'ngx-order-pipe';
 import { ReversePipe } from './custompipes/reverse.pipe';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ReversePipe } from './custompipes/reverse.pipe';
     LoginComponent,
     ViewnotfoundComponent,
     UsersComponent,
-    ReversePipe
+    ReversePipe,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,

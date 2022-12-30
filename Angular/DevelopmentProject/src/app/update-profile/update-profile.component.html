@@ -1,0 +1,8 @@
+<form #updateForm="ngForm" (submit)="updateProfile(updateForm)">
+    <label>ID:</label><input type="number" readonly name="searchUser.id" [(ngModel)]="searchUser.id"><br><br>
+    <label>NAME:</label><input type="text"  name="searchUser.fullName" [(ngModel)]="searchUser.fullName"><br><br>
+    <label>EMAIL ID:</label><input type="email"  name="searchUser.emailId" [(ngModel)]="searchUser.emailId"><br><br>
+    <label>MOBILE NUMBER:</label><input type="text"  name="searchUser.mobileNumber" [(ngModel)]="searchUser.mobileNumber"><br><br>
+    <label>USERNAME:</label><input type="text"name="searchUser.username" [(ngModel)]="searchUser.username" readonly>
+    <input type="submit" value="UPDATE USER"> <input type="reset">
+</form>
